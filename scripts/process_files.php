@@ -52,7 +52,7 @@ function write_notice_line($type, $line, $file) {
 	$out = '';
 	switch ($type) {
 		case 'holds':
-			$out = $line[0]."|".$line[1]."|".$line[2]."|".$line[3]."|".$line[4]."\r\n";;
+			$out = $line[0]."|".$line[1]."|".$line[2]."|".$line[3]."|".$line[4]."|".$line[5]."|".$line[6]."\r\n";;
 			break;
 		case 'renew':
 		case 'overdue':
