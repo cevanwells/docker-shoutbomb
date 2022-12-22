@@ -62,7 +62,7 @@ function write_notice_line($type, $line, $file) {
 		case 'billing':
 		    //patron_no|item_barcode|title|due_date|item_no|total_money_owed|loan_rule|item_holds|bib_holds|renewals|bib_no|checkout_id|patron_barcode
 		    $out = $line[0]."|".$line[1]."|".$line[2]."|".$line[3]."|".$line[4]."|".$line[5]."|".
-		  		   $line[6]."|".$line[7]."|".$line[8]."|".$line[9]."|".$line[10]."|".$line[11]."|".$line[12]."|".$line[13]."\r\n";
+		  		   $line[6]."|".$line[7]."|".$line[8]."|".$line[9]."|".$line[10]."|".$line[11]."|".$line[12]."\r\n";
   		    break;
 	}
 
