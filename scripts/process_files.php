@@ -59,6 +59,11 @@ function write_notice_line($type, $line, $file) {
 			$out = $line[0]."|".$line[1]."|".$line[2]."|".$line[3]."|".$line[4]."|".$line[5]."|".
 				   $line[6]."|".$line[7]."|".$line[8]."|".$line[9]."|".$line[10]."|".$line[11]."\r\n";
 			break;
+		case 'billing':
+		    //patron_no|item_barcode|title|due_date|item_no|total_money_owed|loan_rule|item_holds|bib_holds|renewals|bib_no|checkout_id|patron_barcode
+		    $out = $line[0]."|".$line[1]."|".$line[2]."|".$line[3]."|".$line[4]."|".$line[5]."|".
+		  		   $line[6]."|".$line[7]."|".$line[8]."|".$line[9]."|".$line[10]."|".$line[11]."|".$line[12]."|".$line[13]."\r\n";
+  		    break;
 	}
 
 	fwrite($file,$out);
@@ -82,7 +87,8 @@ function normalize_patron_id($type, $line) {
 			break;
 		case 'renew':
 		case 'overdue':
-			$patronId = $line[0];
+		case 'billing':
+		    $patronId = $line[0];
 			break;
 	}
 	$normalizedPatronId = trim(preg_replace('/[^0-9]/', '', $patronId)); // pls_short_id
